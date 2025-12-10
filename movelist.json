@@ -1,0 +1,156 @@
+[
+    {
+        "name": "Slash",
+        "ID": 0,
+        "Function": 0,
+        "Type": 0,
+        "Target": 0,
+        "Element": 0,
+        "BasePower": 20,
+        "SPCost": 0,
+        "MPCost": 0
+    },
+    {
+        "name": "Meditate",
+        "ID": 1,
+        "Function": 0,
+        "Type": 2,
+        "Target": 1,
+        "Element": 0,
+        "BasePower": 70,
+        "SPCost": 20,
+        "MPCost": 0
+    },
+    {
+        "name": "Nuke",
+        "ID": 2,
+        "Function": 0,
+        "Type": 1,
+        "Target": 2,
+        "Element": 1,
+        "BasePower": 1000,
+        "SPCost": 25,
+        "MPCost": 303
+    },
+    {
+        "name": "Fire Arrow",
+        "ID": 3,
+        "Function": 0,
+        "Type": 1,
+        "Target": 0,
+        "Element": 1,
+        "BasePower": 50,
+        "SPCost": 10,
+        "MPCost": 0
+    },
+    {
+        "name": "Water Arrow",
+        "ID": 4,
+        "Function": 0,
+        "Type": 1,
+        "Target": 0,
+        "Element": 2,
+        "BasePower": 50,
+        "SPCost": 10,
+        "MPCost": 0
+    },
+    {
+        "name": "Cleaving Swipe",
+        "ID": 5,
+        "Function": 0,
+        "Type": 0,
+        "Target": 2,
+        "Element": 0,
+        "BasePower": 20,
+        "SPCost": 20,
+        "MPCost": 0
+    },
+    {
+        "name": "Claw",
+        "ID": 6,
+        "Function": 0,
+        "Type": 0,
+        "Target": 0,
+        "Element": 0,
+        "BasePower": 40,
+        "SPCost": 40,
+        "MPCost": 0
+    },
+    {
+        "name": "Leaf Cannon",
+        "ID": 7,
+        "Function": 0,
+        "Type": 1,
+        "Target": 0,
+        "Element": 3,
+        "BasePower": 40,
+        "SPCost": 0,
+        "MPCost": 30
+    },
+    {
+        "name": "Void Slash",
+        "ID": 8,
+        "Function": 0,
+        "Type": 1,
+        "Target": 0,
+        "Element": 5,
+        "BasePower": 100,
+        "SPCost": 20,
+        "MPCost": 20
+    },
+    {
+        "name": "Holy Slash",
+        "ID": 9,
+        "Function": 0,
+        "Type": 1,
+        "Target": 0,
+        "Element": 4,
+        "BasePower": 50,
+        "SPCost": 20,
+        "MPCost": 20
+    },
+    {
+        "name": "Slap",
+        "ID": 10,
+        "Function": 0,
+        "Type": 0,
+        "Target": 0,
+        "Element": 0,
+        "BasePower": 10,
+        "SPCost": 0,
+        "MPCost": 0
+    },
+    {
+        "name": "Slam",
+        "ID": 11,
+        "Function": 0,
+        "Type": 0,
+        "Target": 0,
+        "Element": 0,
+        "BasePower": 40,
+        "SPCost": 40,
+        "MPCost": 0
+    },
+    {
+        "name": "Flames of Hell",
+        "ID": 12,
+        "Function": 0,
+        "Type": 2,
+        "Target": 0,
+        "Element": 1,
+        "BasePower": 20,
+        "SPCost": 0,
+        "MPCost": 0
+    },
+    {
+        "name": "God-Forsaken Flaming Javelin",
+        "ID": 13,
+        "Function": 0,
+        "Type": 2,
+        "Target": 0,
+        "Element": 1,
+        "BasePower": 100,
+        "SPCost": 35,
+        "MPCost": 0
+    }
+]
