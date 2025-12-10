@@ -60,5 +60,5 @@ python train.py
 Ver o resultado do modelo em tempo real com output do combate:
 
 ```bash
-python train.py
+python replay.py
 ```
