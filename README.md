@@ -1,4 +1,4 @@
-# IA Evolutiva para sistema RPG
+# Jogador RPG Evolutivo
 
 > Implementação de um Algoritmo Evolutivo aplicado a um sistema de combate por turnos (JRPG).
 
@@ -8,7 +8,7 @@
 
 Este projeto foi desenvolvido para a disciplina de SSC0713: Sistemas Evolutivos Aplicados a Robotica.
 
-[Link do Vídeo Explicativo](Ainda nada aqui)
+[Link do Vídeo Explicativo](https://youtu.be/4lDcmkIOUtM)
 
 O objetivo foi criar um sistema evolutivo capaz de aprender, do zero, a jogar um RPG de turno estilo clássico.
 
