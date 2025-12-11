@@ -8,7 +8,7 @@
 
 Este projeto foi desenvolvido para a disciplina de SSC0713: Sistemas Evolutivos Aplicados a Robotica.
 
-[Link do Vídeo Explicativo](https://youtu.be/4lDcmkIOUtM)
+[Link do Vídeo Explicativo](Ainda a ser postado versão 2)
 
 O objetivo foi criar um sistema evolutivo capaz de aprender, do zero, a jogar um RPG de turno estilo clássico.
 

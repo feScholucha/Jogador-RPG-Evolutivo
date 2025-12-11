@@ -15,12 +15,10 @@ PLAYER_OVERRIDE = False # Desativa o sistema automático
 # Abre o arquivo de movimentos
 with open('movelist.json', 'r') as f:
     moveSheet = json.load(f)
-f.close()
 
 # Abre o arquivo de personagens
 with open('charSheet.json', 'r') as f:
     charSheet = json.load(f)
-f.close()
 
 # Cheat Sheet: (O que cada coisa significa)
 # Function: Ataque ou Buff
@@ -64,7 +62,7 @@ TYPE_CHART = {
 
 # O cérebro responsável por fazer o genoma servir para alguma coisa
 class AIBrain:
-    def __init__(self, genome=None, input_size=10, hidden_size=8):
+    def __init__(self, genome=None, input_size=12, hidden_size=8):
         # A arquitetura utilizada de 3 camadas, Input -> Hidden -> Output
         self.input_size = input_size
         self.hidden_size = hidden_size
@@ -215,6 +213,10 @@ class CombatAlgorithms:
         tgt_hp = min(1.0, target_stats['HP'] / target_stats['MaxHP']) if target_stats else 0
         is_self = 1.0 if attacker_stats['battleID'] == target_stats['battleID'] else 0.0
         
+        # Vida Absoluta (Alvo)
+        tgt_max_hp_raw = target_stats['MaxHP'] if target_stats else 0
+        tgt_bulk = min(1.0, tgt_max_hp_raw / 1000.0)
+        
         # Informações do movimento
         cost = move_data['SPCost'] / 50.0 # Normalizando custo
         power = move_data['BasePower'] / 100.0
@@ -229,18 +231,28 @@ class CombatAlgorithms:
         if mult > 1.0: advantage = 1.0
         elif mult < 1.0: advantage = -1.0
         
+        # Número de Inimigos
+        enemy_count = 0
+        for entity in situation:
+            if not entity['isHero'] and entity['isAlive']:
+                enemy_count += 1
+        enemy_density = enemy_count / 3.0 # Normalizado
+        chaos = len(situation) / 4.0
+        
         # Monta o vetor de 10 inputs
         inputs = np.array([
             my_hurt_level,          # Preciso de cura?
-            my_sp,                  # Tenho mana?
+            my_sp,                  # Tenho energia?
             tgt_hp,                 # Inimigo está quase morrendo?
+            tgt_bulk,               # Inimigo tem mta vida absoluta?
             is_self,                # É em mim?
             cost,                   # É caro?
             power,                  # É forte?
             is_heal,                # É cura?
             is_aoe,                 # É área?
             advantage,              # É efetivo?
-            len(situation) / 4.0    # São quantos combatentes?
+            chaos,                  # Cáos total
+            enemy_density           # Quantos Inimigos?
         ])
         
         return inputs
